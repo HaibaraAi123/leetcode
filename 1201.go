@@ -1,4 +1,4 @@
-package main
+package leetcode
 
 func findBoud(nums []int, target int, flag bool) int {
 	lp, rp := 0, len(nums)
@@ -52,8 +52,5 @@ func searchRange(nums []int, target int) []int {
 	}
 	rp := findBoud(nums, target, true)
 	return []int{lp, rp}
-
-}
-func main() {
 
 }
