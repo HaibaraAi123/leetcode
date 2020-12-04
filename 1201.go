@@ -26,15 +26,14 @@ func findBoud(nums []int, target int, flag bool) int {
 			return -1
 		}
 		return lp - 1
+	} else if lp == len(nums) {
+		return -1
+	} else if nums[lp] != target {
+		return -1
 	} else {
-		if lp == len(nums) {
-			return -1
-		}
-		if nums[lp] != target {
-			return -1
-		}
 		return lp
 	}
+
 }
 func searchRange(nums []int, target int) []int {
 	if len(nums) == 0 {
@@ -42,9 +41,8 @@ func searchRange(nums []int, target int) []int {
 	} else if len(nums) == 1 {
 		if nums[0] == target {
 			return []int{0, 0}
-		} else {
-			return []int{-1, -1}
 		}
+		return []int{-1, -1}
 	}
 	lp := findBoud(nums, target, false)
 	if lp == -1 {
