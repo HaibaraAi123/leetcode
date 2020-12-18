@@ -9,9 +9,8 @@ func findTheDifference(s string, t string) byte {
 	for _, v := range []byte(t) {
 		if m[v-'a'] == 0 {
 			return v
-		} else {
-			m[v-'a']--
 		}
+		m[v-'a']--
 	}
 	return ' '
 }
